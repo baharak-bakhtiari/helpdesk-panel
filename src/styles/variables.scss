@@ -1,0 +1,42 @@
+/* ***Fonts*** */
+//For iran-sans-farsi - Regular
+
+@font-face {
+  font-family: IRANSansFarsi;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/iran-sans-farsi/farsi_normal.eot");
+  src: url("../assets/fonts/iran-sans-farsi/farsi_normal.eot") format("embedded-opentype"), url("../assets/fonts/iran-sans-farsi/farsi_normal.woff2") format("woff2"), url("../assets/fonts/iran-sans-farsi/farsi_normal.woff") format("woff"), url("../assets/fonts/iran-sans-farsi/farsi_normal.ttf") format("truetype");
+}
+
+//For iran-sans-farsi - Bold
+@font-face {
+  font-family: 'iran-sans-farsi';
+  src: url("../assets/fonts/iran-sans-farsi/farsi_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+
+  /* ***animation*** */
+
+  --animation-ease: all 0.3s ease;
+
+}
+
+/* ***Colors*** */
+
+:root[data-theme="default"] {
+  --primary-color: #5B5CB9;
+  --secondary-color: #F77E0B;
+  --secondary-background: #8DDFEA;
+  --main-background: #ffffff; /*white for light themes*/
+  --text-color-dark: #494e4e; /*dark gray for light themes*/
+  --text-color-light: #ffffff; /*dark gray for light themes*/
+  --light-gray: #e2e2e2; /*light gray*/
+}
+
+
+
+

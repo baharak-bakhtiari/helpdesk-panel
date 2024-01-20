@@ -1,0 +1,55 @@
+<div class="authentication-page d-flex align-items-center justify-content-center min-vh-100">
+  <div class="container">
+    <div class="row shadow-lg rounded-4">
+      <div class="authentication-right col-12 col-lg-6">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <img class="logo-img" src="../../../assets/images/Mobin-Logo.png" />
+          <strong data-type="primary-title">ورود به سیستم پشتیبانی</strong>
+        </div>
+        <form class="authentication-form d-flex flex-column gap-3" method="post">
+          <div class="field d-flex flex-column gap-1">
+            <label for="username" class="form-label m-0 fw-bold">نام کاربری</label>
+            <input type="text" id="username" class="form-control m-0" placeholder="نام کاربری">
+            <span data-type="input-validation-alert"></span>
+          </div>
+          <password></password>
+          <div class="field d-flex flex-column gap-1">
+            <label class="form-label m-0 fw-bold">کد امنیتی</label>
+            <div class="captcha-field form-control container py-0">
+              <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-4 input-container d-flex flex-column">
+                  <input class="h-100" type="text" placeholder="کد امنیتی">
+                </div>
+                <div class="col-8 d-flex align-items-center justify-content-end px-0">
+                  <div class="col-10 captcha-image p-0">
+                    <img class="img-fluid" src="../../../assets/images/captcha.png" height="48" width="180" alt="تصویر امنیتی" />
+                  </div>
+                  <div class="col-2 refresh-captcha d-flex justify-content-center">
+                    <a class="change-captcha">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span data-type="input-validation-alert"></span>
+          </div>
+          <div class="field mt-4">
+            <button type="submit" class="w-100" data-type="primary-button">ورود</button>
+          </div>
+        </form>
+        <div>
+          <p class="d-flex justify-content-center mt-3">
+            <a routerLink="/forget-password" data-type="hyper-link" class="d-block">فراموشی رمز عبور</a>
+          </p>
+        </div>
+      </div>
+      <div class="authentication-left col-12 col-lg-6 d-flex flex-column justify-content-end p-0">
+        <img src="../../../assets/images/customer-support.png" />
+      </div>
+    </div>
+  </div>
+</div>

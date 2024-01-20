@@ -1,1 +1,155 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/bootstrap.scss";
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: IRANSansFarsi;
+}
+
+body {
+  direction: rtl;
+  font-size: 14px;
+  color: var(--text-color-dark);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+[data-type="hyper-link"] {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+[data-type="hyper-link"]:hover {
+  color: var(--secondary-color);
+}
+
+[data-type="primary-title"] {
+  font-size: 18px;
+  margin: 1rem 0;
+}
+
+[data-type="input-validation-alert"] {
+  color: #f51919;
+}
+
+[data-type="primary-button"] {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--secondary-color)
+  }
+}
+
+.authentication-form {
+  padding: 3rem 2rem;
+}
+
+.authentication-right {
+  padding: 4rem;
+}
+
+.authentication-left {
+  background-color: var(--primary-color);
+}
+
+.logo-img {
+  width: 7rem;
+}
+
+.field button,
+.form-control {
+  height: 48px;
+}
+
+.field input:focus {
+  border: 2px solid var(--primary-color);
+  box-shadow: none;
+}
+
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 48%;
+  left: 4%;
+  cursor: pointer;
+  color: #808080;
+  font-size: 18px;
+}
+
+.field .captcha-field {
+  border: 1px solid var(--light-gray);
+}
+
+.field .captcha-field:focus-within {
+  border: 2px solid var(--primary-color);
+}
+
+.field .captcha-field .row .input-container input {
+  border: none;
+  outline: none;
+  max-width: 75px;
+}
+
+.captcha-image img,
+.captcha-image {
+  height: 44px;
+  width: 180px;
+}
+
+.change-captcha > svg {
+  color: var(--primary-color);
+
+  &:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+}
+
+.authentication-left {
+  border-radius: 1rem 0 0 1rem;
+
+  img {
+    border-radius: 0 1rem;
+    height: 500px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 992px) {
+
+  .authentication-form {
+    padding: 0;
+  }
+
+  .authentication-right {
+    padding: 0.8rem;
+  }
+
+  .authentication-left {
+    border-radius: 0;
+
+    img {
+      border-radius: 0;
+    }
+  }
+}
