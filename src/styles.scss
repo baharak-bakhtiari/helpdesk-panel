@@ -115,7 +115,7 @@ a {
   width: 180px;
 }
 
-.change-captcha > svg {
+.change-captcha > i {
   color: var(--primary-color);
 
   &:hover {
@@ -129,7 +129,7 @@ a {
 
   img {
     border-radius: 0 1rem;
-    height: 500px;
+    object-fit: cover;
   }
 }
 
