@@ -12,9 +12,9 @@ import { InputPasswordComponent } from '../input-password/input-password.compone
 })
 export class LoginComponent {
 
-  loginForm!: FormGroup;
+  form!: FormGroup;
   constructor(formBuilder: FormBuilder) {
-    this.loginForm = formBuilder.group({
+    this.form = formBuilder.group({
       username: [""],
       password: [""],
       captchaCode: [""]
@@ -22,6 +22,6 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    console.log(this.loginForm);
+    console.log(this.form);
   }
 }
