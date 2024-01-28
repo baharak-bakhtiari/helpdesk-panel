@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { PasswordComponent } from '../password/password.component';
+import { InputPasswordComponent } from '../input-password/input-password.component';
 
 @Component({
   selector: 'login',
   standalone: true,
-  imports: [RouterLink, PasswordComponent],
+  imports: [RouterLink, InputPasswordComponent, FormsModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
 
+  loginForm!: FormGroup;
+  constructor(formBuilder: FormBuilder) {
+    this.loginForm = formBuilder.group({
+      username: [""],
+      password: [""],
+      captchaCode: [""]
+    });
+  }
+
+  onSubmit() {
+    console.log(this.loginForm);
+  }
 }

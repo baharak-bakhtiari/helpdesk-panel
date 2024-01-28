@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PasswordComponent } from '../password/password.component';
+import { InputPasswordComponent } from '../input-password/input-password.component';
 
 @Component({
   selector: 'reset-password',
   standalone: true,
-  imports: [RouterLink, PasswordComponent],
+  imports: [RouterLink, InputPasswordComponent],
   templateUrl: './reset-password.component.html',
   styleUrl: './reset-password.component.scss'
 })

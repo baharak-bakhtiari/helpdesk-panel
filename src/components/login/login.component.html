@@ -6,19 +6,19 @@
           <img class="logo-img" src="../../../assets/images/Mobin-Logo.png" />
           <strong data-type="primary-title">ورود به سیستم پشتیبانی</strong>
         </div>
-        <form class="authentication-form d-flex flex-column gap-3" method="post">
+        <form class="authentication-form d-flex flex-column gap-3" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="field d-flex flex-column gap-1">
             <label for="username" class="form-label m-0 fw-bold">نام کاربری</label>
-            <input type="text" id="username" class="form-control m-0" placeholder="نام کاربری">
+            <input type="text" id="username" class="form-control m-0" formControlName="username" placeholder="نام کاربری">
             <span data-type="input-validation-alert"></span>
           </div>
-          <password></password>
+          <input-password formControlName="password"></input-password>
           <div class="field d-flex flex-column gap-1">
             <label class="form-label m-0 fw-bold">کد امنیتی</label>
             <div class="captcha-field form-control container py-0">
               <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-4 input-container d-flex flex-column">
-                  <input class="h-100" type="text" placeholder="کد امنیتی">
+                  <input class="h-100" type="text" formControlName="captchaCode" placeholder="کد امنیتی">
                 </div>
                 <div class="col-8 d-flex align-items-center justify-content-end px-0">
                   <div class="col-10 captcha-image p-0">
