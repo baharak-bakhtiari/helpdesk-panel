@@ -136,10 +136,11 @@ a {
   }
 }
 
-input.ng-invalid.ng-touched {
+.invalid-input,
+:host .invalid-input,
+.invalid-input input {
   border-color: red;
 }
-
 
 /* RESPONSIVE */
 
