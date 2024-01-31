@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from '../components/dashboard/dashboard.component';
-import { ForgetPasswordComponent } from '../components/forget-password/forget-password.component';
-import { LoginComponent } from '../components/login/login.component';
-import { NotFoundComponent } from '../components/not-found/not-found.component';
-import { ResetPasswordComponent } from '../components/reset-password/reset-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { LoginComponent } from './components/login/login.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => DashboardComponent },
