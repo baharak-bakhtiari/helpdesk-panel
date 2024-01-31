@@ -6,7 +6,7 @@ import { NotFoundComponent } from '../components/not-found/not-found.component';
 import { ResetPasswordComponent } from '../components/reset-password/reset-password.component';
 
 export const routes: Routes = [
-  { path: '', loadComponent: () => LoginComponent },
+  { path: '', loadComponent: () => DashboardComponent },
   { path: 'login', loadComponent: () => LoginComponent, data: { allowAnonymous: true } },
   { path: 'forgot-password', loadComponent: () => ForgetPasswordComponent, data: { allowAnonymous: true }, },
   { path: 'reset-password', loadComponent: () => ResetPasswordComponent, data: { allowAnonymous: true } },

@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
     "\\src\\components\\input-password",
     "\\src\\components\\login",
-    "\\src\\components\\reset-password",
-    "\\src\\styles"
+    "\\src\\components\\reset-password"
   ],
-  "SelectedNode": "\\src\\styles.scss",
+  "SelectedNode": "\\src\\components\\input-password\\input-password.component.html",
   "PreviewInSolutionExplorer": false
 }
