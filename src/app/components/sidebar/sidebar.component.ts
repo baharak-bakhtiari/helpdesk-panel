@@ -12,11 +12,13 @@ import { MenuItem } from '../../infrastructure/typings';
 export class SidebarComponent {
 
   menuItems: MenuItem[] = [
-    { label: "داشبورد", path: "", children: [], icon: "", active: true },
-    { label: "محصولات", path: "", children: [], icon: "", active: true },
-    { label: "فروش", path: "", children: [], icon: "", active: true },
-    { label: "تخفیفات", path: "", children: [], icon: "", active: true },
-    { label: "آنالیزها", path: "", children: [], icon: "", active: true },
+    { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
+    { label: "محصولات", path: "", children: [], icon: "bi bi-box-seam", active: true },
+    { label: "مشتریان", path: "", children: [], icon: "bi bi-people", active: true },
+    { label: "سفارشات", path: "", children: [], icon: "bi bi-card-checklist", active: true },
+    { label: "تخفیفات", path: "", children: [], icon: "bi bi-percent", active: true },
+    { label: "آنالیزها", path: "", children: [], icon: "bi bi-graph-up", active: true },
+    { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: true },
   ]
 
 }

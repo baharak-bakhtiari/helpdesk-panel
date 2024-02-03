@@ -1,0 +1,26 @@
+.navbar {
+  background-color: var( --primary-color);
+  width: 18rem;
+}
+
+.navbar a {
+  color: var(--main-background);
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.navbar .active a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 5px;
+  height: 32px;
+  background-color: var(--secondary-color);
+  border-radius: 5px 0 0 5px;
+}
+
+.navbar i {
+  font-size: 20px;
+}
