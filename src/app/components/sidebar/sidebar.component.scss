@@ -3,6 +3,26 @@
   width: 18rem;
 }
 
+.navbar.shrank {
+  width: 5rem;
+}
+
+.navbar.shrank .nav-link span {
+  display: none;
+}
+
+.navbar.shrank .large-logo {
+  display: none;
+}
+
+.navbar .small-logo {
+  display: none;
+}
+
+.navbar.shrank .small-logo {
+  display: block;
+}
+
 .navbar a {
   color: var(--main-background);
 
@@ -15,7 +35,7 @@
   content: '';
   position: absolute;
   right: 0;
-  width: 5px;
+  width: 4px;
   height: 32px;
   background-color: var(--secondary-color);
   border-radius: 5px 0 0 5px;

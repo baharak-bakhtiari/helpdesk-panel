@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SidebarHandlerService } from '../../services/sidebar-handler.service';
+
 
 @Component({
   selector: 'header',
@@ -9,4 +11,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private siderbarService: SidebarHandlerService) { }
+
+  onToggleSidebar() {
+    console.log("clicked");
+    this.siderbarService.ToggleSidebar();
+  }
 }

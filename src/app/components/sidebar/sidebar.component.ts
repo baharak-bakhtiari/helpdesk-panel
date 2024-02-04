@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { MenuItem } from '../../infrastructure/typings';
+import { SidebarHandlerService } from '../../services/sidebar-handler.service';
 
 @Component({
   selector: 'sidebar',
@@ -9,7 +11,10 @@ import { MenuItem } from '../../infrastructure/typings';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
+
+  sidebarExpanded: boolean = true;
+  subscription!: Subscription;
 
   menuItems: MenuItem[] = [
     { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
@@ -21,4 +26,18 @@ export class SidebarComponent {
     { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: true },
   ]
 
+  constructor(private sidebarService: SidebarHandlerService) {
+
+  }
+
+  ngOnInit(): void {
+    this.subscription = this.sidebarService.sidebarStyleChanges.subscribe((sidebarStyle: boolean) => {
+      this.sidebarExpanded = sidebarStyle;
+      console.log("toggled!");
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 }

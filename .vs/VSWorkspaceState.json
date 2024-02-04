@@ -4,8 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\sidebar"
+    "\\src\\app\\components\\header",
+    "\\src\\app\\components\\sidebar",
+    "\\src\\app\\services",
+    "\\src\\assets\\images",
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\styles.scss",
+  "SelectedNode": "\\src\\app\\components\\header\\header.component.ts",
   "PreviewInSolutionExplorer": false
 }

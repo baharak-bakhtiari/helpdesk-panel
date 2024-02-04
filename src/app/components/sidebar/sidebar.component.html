@@ -1,15 +1,16 @@
-<nav class="navbar d-flex flex-column align-items-start vh-100 px-4 py-5">
-  <div class="d-flex flex-column gap-5 w-100">
-    <a class="navbar-brand mx-0 text-center">
-      <img src="../assets/images/Mobin-Logo-White.png" height="50" />
+  <nav class="navbar d-flex flex-column align-items-start vh-100 px-4 py-5" [ngClass]="sidebarExpanded ? '' : 'shrank'" >
+    <div class="d-flex flex-column gap-5 w-100">
+      <a class="navbar-brand mx-0 text-center">
+        <img src="../assets/images/Mobin-Logo-White.png" class="large-logo" height="50" />
+        <img src="../assets/images/Logo.png" class="small-logo" height="40" />
+      </a>
+      <ul class="navbar-nav" id="navbarSupportedContent">
+        <li class="nav-item mt-2" *ngFor="let menuItem of menuItems">
+          <a class="nav-link d-flex gap-4" href="#"><i class={{menuItem.icon}}></i> <span>{{menuItem.label}}</span></a>
+        </li>
+      </ul>
+    </div>
+    <a class="nav-link d-flex gap-4" href="#">
+      <i class="bi bi-box-arrow-right"></i><span>خروج</span>
     </a>
-    <ul class="navbar-nav">
-      <li class="nav-item mt-2" *ngFor="let menuItem of menuItems">
-        <a class="nav-link d-flex gap-4" href="#"> <i class={{menuItem.icon}}></i> <span class="sr-only">{{menuItem.label}}</span></a>
-      </li>
-    </ul>
-  </div>
-  <a class="nav-link d-flex gap-4" href="#">
-    <i class="bi bi-box-arrow-right"></i><span>خروج</span>
-  </a>
-</nav>
+  </nav>
