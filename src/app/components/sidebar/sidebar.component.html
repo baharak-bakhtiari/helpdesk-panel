@@ -1,4 +1,4 @@
-  <nav class="navbar d-flex flex-column align-items-start vh-100 px-4 py-5" [ngClass]="sidebarExpanded ? '' : 'shrank'" >
+  <nav class="navbar d-flex flex-column align-items-start vh-100 px-4 py-5" [ngClass]="(!sidebarExpanded && screenWidth>1200) ? 'shrank' : (sidebarOpened && screenWidth<1200) ? 'open' : ''" >
     <div class="d-flex flex-column gap-5 w-100">
       <a class="navbar-brand mx-0 text-center">
         <img src="../assets/images/Mobin-Logo-White.png" class="large-logo" height="50" />

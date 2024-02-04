@@ -14,7 +14,11 @@ export class HeaderComponent {
   constructor(private siderbarService: SidebarHandlerService) { }
 
   onToggleSidebar() {
-    console.log("clicked");
-    this.siderbarService.ToggleSidebar();
+    if (window.innerWidth > 1200) {
+      this.siderbarService.ToggleSidebar();
+    }
+    else {
+      this.siderbarService.openSidebar();
+    }
   }
 }

@@ -13,8 +13,13 @@ import { SidebarHandlerService } from '../../services/sidebar-handler.service';
 })
 export class SidebarComponent implements OnInit {
 
+  screenWidth!: number;
+
   sidebarExpanded: boolean = true;
-  subscription!: Subscription;
+  toggleSubscription!: Subscription;
+
+  sidebarOpened = false;
+  openSubscription!: Subscription;
 
   menuItems: MenuItem[] = [
     { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
@@ -31,13 +36,21 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.subscription = this.sidebarService.sidebarStyleChanges.subscribe((sidebarStyle: boolean) => {
+    this.toggleSubscription = this.sidebarService.sidebarStyleChanges.subscribe((sidebarStyle: boolean) => {
       this.sidebarExpanded = sidebarStyle;
-      console.log("toggled!");
+      this.screenWidth = window.innerWidth;
+      console.log(this.screenWidth);
+    });
+
+    this.openSubscription = this.sidebarService.sidebarOpenChanges.subscribe((sidebarOpen: boolean) => {
+      this.sidebarOpened = sidebarOpen;
+      this.screenWidth = window.innerWidth;
+      console.log(this.screenWidth);
     });
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.toggleSubscription.unsubscribe();
+    this.openSubscription.unsubscribe();
   }
 }
