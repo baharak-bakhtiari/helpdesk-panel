@@ -43,7 +43,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     //Open sidebar (just small screens)
     this.openSubscription = this.sidebarService.sidebarOpenChanges.subscribe(() => {
       this.sidebarExpanded = true;
-      this.sidebarOpened = !this.sidebarOpened;
+      this.sidebarOpened = true;
       this.hasOverlay = true;
       this.screenWidth = window.innerWidth;
     });

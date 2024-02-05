@@ -1,11 +1,12 @@
 .navbar {
   background-color: var( --primary-color);
-  width: 18rem;
+  width: 15rem;
+  right: 0;
   transition: all 0.5s ease;
 }
 
 .navbar.shrank {
-  width: 5rem;
+  width: 4.5rem;
 }
 
 .navbar.shrank .nav-link span {
@@ -50,7 +51,7 @@
 
   .navbar {
     position: fixed;
-    right: -18rem;
+    right: -15rem;
     top: 0;
     z-index: 1000;
     visibility: hidden;

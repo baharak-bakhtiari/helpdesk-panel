@@ -1,1 +1,31 @@
-<button class="border-0 bg-body" (click)="onToggleSidebar()"><i class="bi bi-list"></i></button>
+<nav class="navbar navbar-expand-lg bg-light justify-content-between rounded-4 py-2 px-3">
+  <ul class="navbar-nav d-flex mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="onToggleSidebar()"><i class="bi bi-list"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="bi bi-moon"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+    </li>
+  </ul>
+  <div class="d-flex">
+    <div class="dropdown">
+      <button class="btn dropdown-toggle px-0" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+        بهارک بختیاری
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">حساب کاربری</a>
+        <a class="dropdown-item" href="#">فراموشی رمز عبور</a>
+        <a class="dropdown-item" href="#">تاریخچه ورود و خروج</a>
+      </div>
+    </div>
+    <img src="../assets/images/profile-pic.jpg" class="rounded-4" width="40" />
+  </div>
+</nav>
+
+
