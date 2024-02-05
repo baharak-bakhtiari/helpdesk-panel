@@ -1,11 +1,7 @@
 .navbar {
   background-color: var( --primary-color);
   width: 18rem;
-}
-
-.navbar.open {
-  visibility: visible;
-  right: 0;
+  transition: all 0.5s ease;
 }
 
 .navbar.shrank {
@@ -20,12 +16,12 @@
   display: none;
 }
 
-.navbar .small-logo {
-  display: none;
-}
-
 .navbar.shrank .small-logo {
   display: block;
+}
+
+.navbar .small-logo {
+  display: none;
 }
 
 .navbar a {
@@ -50,12 +46,34 @@
   font-size: 20px;
 }
 
-
 @media(max-width: 1200px) {
 
   .navbar {
-    visibility: hidden;
-    position: absolute;
+    position: fixed;
     right: -18rem;
+    top: 0;
+    z-index: 1000;
+    visibility: hidden;
+  }
+
+  .navbar.open {
+    visibility: visible;
+    right: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar-overlay.active {
+    visibility: visible;
+    opacity: 1;
   }
 }

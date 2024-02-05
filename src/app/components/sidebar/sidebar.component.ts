@@ -15,6 +15,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   sidebarExpanded = true;
   sidebarOpened = false;
+  hasOverlay = false;
   screenWidth!: number;
   toggleSubscription!: Subscription;
   openSubscription!: Subscription;
@@ -32,17 +33,26 @@ export class SidebarComponent implements OnInit, OnDestroy {
   constructor(private sidebarService: SidebarHandlerService) { }
 
   ngOnInit(): void {
+    //Shrink sidebar width (just large screens)
     this.toggleSubscription = this.sidebarService.sidebarStyleChanges.subscribe(() => {
       this.sidebarOpened = false;
       this.sidebarExpanded = !this.sidebarExpanded;
       this.screenWidth = window.innerWidth;
     });
 
+    //Open sidebar (just small screens)
     this.openSubscription = this.sidebarService.sidebarOpenChanges.subscribe(() => {
       this.sidebarExpanded = true;
       this.sidebarOpened = !this.sidebarOpened;
+      this.hasOverlay = true;
       this.screenWidth = window.innerWidth;
     });
+  }
+
+  //Close sidebar on click outside (just small screens)
+  closeSidebar() {
+    this.sidebarOpened = false;
+    this.hasOverlay = false;
   }
 
   ngOnDestroy(): void {
