@@ -6,23 +6,16 @@ import { Subject } from 'rxjs';
 })
 export class SidebarHandlerService {
 
-  sidebarExpanded = true;
-  sidebarStyleChanges = new Subject<boolean>();
-
-  sidebarOpened = false;
-  sidebarOpenChanges = new Subject<boolean>();
+  sidebarStyleChanges = new Subject<void>();
+  sidebarOpenChanges = new Subject<void>();
 
   constructor() { }
 
   ToggleSidebar() {
-    this.sidebarExpanded = !this.sidebarExpanded;
-    this.sidebarOpened = false;
-    this.sidebarStyleChanges.next(this.sidebarExpanded);
+    this.sidebarStyleChanges.next();
   }
 
   openSidebar() {
-    this.sidebarOpened = !this.sidebarOpened;
-    this.sidebarExpanded = true;
-    this.sidebarOpenChanges.next(this.sidebarOpened);
+    this.sidebarOpenChanges.next();
   }
 }

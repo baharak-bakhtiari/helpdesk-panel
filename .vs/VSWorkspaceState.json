@@ -4,12 +4,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\dashboard",
     "\\src\\app\\components\\header",
-    "\\src\\app\\components\\sidebar",
-    "\\src\\app\\services",
-    "\\src\\assets\\images",
-    "\\src\\styles"
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\components\\header\\header.component.ts",
+  "SelectedNode": "\\src\\app\\services\\sidebar-handler.service.ts",
   "PreviewInSolutionExplorer": false
 }

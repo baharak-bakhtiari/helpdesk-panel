@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MenuItem } from '../../infrastructure/typings';
 import { SidebarHandlerService } from '../../services/sidebar-handler.service';
@@ -11,14 +11,12 @@ import { SidebarHandlerService } from '../../services/sidebar-handler.service';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
 
-  screenWidth!: number;
-
-  sidebarExpanded: boolean = true;
-  toggleSubscription!: Subscription;
-
+  sidebarExpanded = true;
   sidebarOpened = false;
+  screenWidth!: number;
+  toggleSubscription!: Subscription;
   openSubscription!: Subscription;
 
   menuItems: MenuItem[] = [
@@ -31,21 +29,19 @@ export class SidebarComponent implements OnInit {
     { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: true },
   ]
 
-  constructor(private sidebarService: SidebarHandlerService) {
-
-  }
+  constructor(private sidebarService: SidebarHandlerService) { }
 
   ngOnInit(): void {
-    this.toggleSubscription = this.sidebarService.sidebarStyleChanges.subscribe((sidebarStyle: boolean) => {
-      this.sidebarExpanded = sidebarStyle;
+    this.toggleSubscription = this.sidebarService.sidebarStyleChanges.subscribe(() => {
+      this.sidebarOpened = false;
+      this.sidebarExpanded = !this.sidebarExpanded;
       this.screenWidth = window.innerWidth;
-      console.log(this.screenWidth);
     });
 
-    this.openSubscription = this.sidebarService.sidebarOpenChanges.subscribe((sidebarOpen: boolean) => {
-      this.sidebarOpened = sidebarOpen;
+    this.openSubscription = this.sidebarService.sidebarOpenChanges.subscribe(() => {
+      this.sidebarExpanded = true;
+      this.sidebarOpened = !this.sidebarOpened;
       this.screenWidth = window.innerWidth;
-      console.log(this.screenWidth);
     });
   }
 
