@@ -4,7 +4,7 @@ import { ForgetPasswordComponent } from './components/authentication/forget-pass
 import { LoginComponent } from './components/authentication/login/login.component';
 import { ResetPasswordComponent } from './components/authentication/reset-password/reset-password.component';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
-import { ProductsComponent } from './components/admin/New folder/products/products.component';
+import { ProductsComponent } from './components/admin/dashboard-pages/products/products.component';
 
 export const routes: Routes = [
   {
