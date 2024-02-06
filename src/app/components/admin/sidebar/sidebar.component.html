@@ -7,7 +7,7 @@
     </a>
     <ul class="navbar-nav" id="navbarSupportedContent">
       <li class="nav-item mt-2" *ngFor="let menuItem of menuItems">
-        <a class="nav-link d-flex gap-4" href="#"><i class={{menuItem.icon}}></i> <span>{{menuItem.label}}</span></a>
+        <a class="nav-link d-flex gap-4" routerLink="{{menuItem.path}}"><i class={{menuItem.icon}}></i> <span>{{menuItem.label}}</span></a>
       </li>
     </ul>
   </div>

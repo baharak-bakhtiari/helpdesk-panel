@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SidebarHandlerService } from '../../services/sidebar-handler.service';
+import { SidebarHandlerService } from '../../../services/sidebar-handler.service';
 
 
 @Component({

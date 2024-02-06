@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MenuItem } from '../../infrastructure/typings';
-import { SidebarHandlerService } from '../../services/sidebar-handler.service';
+import { MenuItem } from '../../../infrastructure/typings';
+import { SidebarHandlerService } from '../../../services/sidebar-handler.service';
 
 @Component({
   selector: 'sidebar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -22,7 +23,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   menuItems: MenuItem[] = [
     { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
-    { label: "محصولات", path: "", children: [], icon: "bi bi-box-seam", active: true },
+    { label: "محصولات", path: "products", children: [], icon: "bi bi-box-seam", active: true },
     { label: "مشتریان", path: "", children: [], icon: "bi bi-people", active: true },
     { label: "سفارشات", path: "", children: [], icon: "bi bi-card-checklist", active: true },
     { label: "تخفیفات", path: "", children: [], icon: "bi bi-percent", active: true },
