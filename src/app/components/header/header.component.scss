@@ -1,8 +1,36 @@
-i {
+.nav-item i {
   color: var(--primary-color);
   font-size: 20px;
 
   &:hover {
     color: var(--secondary-color);
+  }
+}
+
+.btn.dropdown-toggle {
+  background: var(--main-background);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-color);
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0 0 0.375rem 0.375rem;
+  border-top: 2px solid var(--secondary-color);
+  margin-top: 15px;
+
+  a {
+    background: none;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
   }
 }

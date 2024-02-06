@@ -6,8 +6,11 @@
     "\\src\\app\\components",
     "\\src\\app\\components\\dashboard",
     "\\src\\app\\components\\header",
-    "\\src\\app\\services"
+    "\\src\\app\\components\\sidebar",
+    "\\src\\assets",
+    "\\src\\assets\\images",
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\app\\services\\sidebar-handler.service.ts",
+  "SelectedNode": "\\src\\assets\\images\\profile-pic.jpg",
   "PreviewInSolutionExplorer": false
 }
