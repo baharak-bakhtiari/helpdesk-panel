@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MenuItem } from '../../../infrastructure/typings';
 import { SidebarHandlerService } from '../../../services/sidebar-handler.service';
@@ -8,7 +8,7 @@ import { SidebarHandlerService } from '../../../services/sidebar-handler.service
 @Component({
   selector: 'sidebar',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -23,12 +23,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   menuItems: MenuItem[] = [
     { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
-    { label: "محصولات", path: "products", children: [], icon: "bi bi-box-seam", active: true },
-    { label: "مشتریان", path: "", children: [], icon: "bi bi-people", active: true },
-    { label: "سفارشات", path: "", children: [], icon: "bi bi-card-checklist", active: true },
-    { label: "تخفیفات", path: "", children: [], icon: "bi bi-percent", active: true },
-    { label: "آنالیزها", path: "", children: [], icon: "bi bi-graph-up", active: true },
-    { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: true },
+    { label: "محصولات", path: "products", children: [], icon: "bi bi-box-seam", active: false },
+    { label: "مشتریان", path: "", children: [], icon: "bi bi-people", active: false },
+    { label: "سفارشات", path: "", children: [], icon: "bi bi-card-checklist", active: false },
+    { label: "تخفیفات", path: "", children: [], icon: "bi bi-percent", active: false },
+    { label: "آنالیزها", path: "", children: [], icon: "bi bi-graph-up", active: false },
+    { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: false },
   ]
 
   constructor(private sidebarService: SidebarHandlerService) { }

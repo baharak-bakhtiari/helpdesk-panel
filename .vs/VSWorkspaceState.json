@@ -4,13 +4,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\dashboard",
-    "\\src\\app\\components\\header",
-    "\\src\\app\\components\\sidebar",
-    "\\src\\assets",
-    "\\src\\assets\\images",
-    "\\src\\styles"
+    "\\src\\app\\components\\admin",
+    "\\src\\app\\components\\admin\\header",
+    "\\src\\app\\components\\admin\\sidebar"
   ],
-  "SelectedNode": "\\src\\assets\\images\\profile-pic.jpg",
+  "SelectedNode": "\\src\\app\\components\\admin\\sidebar\\sidebar.component.ts",
   "PreviewInSolutionExplorer": false
 }

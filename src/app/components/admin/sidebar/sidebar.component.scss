@@ -33,14 +33,18 @@
   }
 }
 
-.navbar .active a::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 4px;
-  height: 32px;
-  background-color: var(--secondary-color);
-  border-radius: 5px 0 0 5px;
+.navbar .active a {
+  color: var(--secondary-color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 4px;
+    height: 32px;
+    background-color: var(--secondary-color);
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 .navbar i {
