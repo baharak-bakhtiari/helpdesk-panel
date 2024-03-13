@@ -29,7 +29,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     { label: "تیم پشتیبانی", path: "orders", children: [], icon: "bi bi-people-fill", active: false },
     { label: "گزارش‌ها", path: "discounts", children: [], icon: "bi bi-graph-up", active: false },
     { label: "ادمین", path: "inventory", children: [], icon: "bi bi-gear", active: false },
-    { label: "سایر", path: "inventory", children: [], icon: "bi bi-three-dots", active: false },
+    { label: "سایر", path: "others", children: [], icon: "bi bi-three-dots", active: false },
   ]
 
   constructor(private sidebarService: SidebarHandlerService) { }

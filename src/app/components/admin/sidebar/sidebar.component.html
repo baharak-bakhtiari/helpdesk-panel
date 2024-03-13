@@ -12,7 +12,10 @@
           *ngFor="let menuItem of menuItems; let i = index"
           routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link d-flex gap-4" href="#" routerLink="{{menuItem.path}}">
-          <i class={{menuItem.icon}}></i>
+          <div data-type="tooltip">
+            <i class={{menuItem.icon}}></i>
+            <span class="tooltiptext">{{menuItem.label}}</span>
+          </div>
           <span>{{menuItem.label}}</span>
         </a>
       </li>

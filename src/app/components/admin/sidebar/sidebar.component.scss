@@ -9,7 +9,7 @@
   width: 4.5rem;
 }
 
-.navbar.shrank .nav-link span {
+.navbar.shrank .nav-link > span {
   display: none;
 }
 
@@ -49,6 +49,14 @@
 
 .navbar i {
   font-size: 20px;
+}
+
+[data-type="tooltip"]:hover .tooltiptext {
+  visibility: hidden;
+}
+
+.shrank [data-type="tooltip"]:hover .tooltiptext {
+  visibility: visible;
 }
 
 @media(max-width: 1200px) {
