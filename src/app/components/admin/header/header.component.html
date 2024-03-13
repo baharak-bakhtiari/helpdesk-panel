@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand bg-light justify-content-between rounded-2 py-2 px-3">
+<nav class="navbar navbar-expand bg-light justify-content-between py-2 px-3 border-bottom">
   <ul class="navbar-nav d-flex mr-auto">
     <li class="nav-item">
       <a class="nav-link" (click)="onToggleSidebar()"><i class="bi bi-list"></i></a>
@@ -15,14 +15,25 @@
   </ul>
   <div class="d-flex">
     <div class="dropdown">
-      <button class="btn dropdown-toggle d-flex rounded-2 border-0 gap-1 px-2 py-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+      <button class="btn dropdown-toggle d-flex rounded-circle gap-1 px-2 py-1 position-relative" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
         <i class="bi bi-person"></i>
-        <span>بهارک بختیاری</span>
+        <span class="position-absolute translate-middle bg-success border border-light rounded-circle user-status-badge">
+          <span class="visually-hidden">New alerts</span>
+        </span>
       </button>
       <div class="dropdown-menu shadow text-end" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">حساب کاربری</a>
-        <a class="dropdown-item" href="#">فراموشی رمز عبور</a>
-        <a class="dropdown-item" href="#">تاریخچه ورود و خروج</a>
+        <a class="dropdown-item" href="#">
+          <i class="bi bi-person"></i>
+          حساب کاربری
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="bi bi-key"></i>
+          فراموشی رمز عبور
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="bi bi-clock-history"></i>
+          تاریخچه ورود و خروج
+        </a>
       </div>
     </div>
   </div>

@@ -22,13 +22,13 @@ export class SidebarComponent implements OnInit, OnDestroy {
   openSubscription!: Subscription;
 
   menuItems: MenuItem[] = [
-    { label: "داشبورد", path: "", children: [], icon: "bi bi-columns", active: true, },
-    { label: "محصولات", path: "products", children: [], icon: "bi bi-box-seam", active: false },
-    { label: "مشتریان", path: "", children: [], icon: "bi bi-people", active: false },
-    { label: "سفارشات", path: "", children: [], icon: "bi bi-card-checklist", active: false },
-    { label: "تخفیفات", path: "", children: [], icon: "bi bi-percent", active: false },
-    { label: "آنالیزها", path: "", children: [], icon: "bi bi-graph-up", active: false },
-    { label: "موجودی انبار", path: "", children: [], icon: "bi bi-building-check", active: false },
+    { label: "صفحه اصلی", path: "", children: [], icon: "bi bi-columns", active: true, },
+    { label: "تیکت‌ جدید", path: "products", children: [], icon: "bi bi-box-seam", active: false },
+    { label: "مدیریت تیکت‌ها", path: "analysis", children: [], icon: "bi bi-graph-up", active: false },
+    { label: "مشتریان", path: "consumers", children: [], icon: "bi bi-people", active: false },
+    { label: "تیم پشتیبانی", path: "orders", children: [], icon: "bi bi-card-checklist", active: false },
+    { label: "گزارش‌ها", path: "discounts", children: [], icon: "bi bi-percent", active: false },
+    { label: "ادمین", path: "inventory", children: [], icon: "bi bi-building-check", active: false },
   ]
 
   constructor(private sidebarService: SidebarHandlerService) { }
