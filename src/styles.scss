@@ -50,13 +50,15 @@ a {
 [data-type="primary-button"] {
   background-color: var(--primary-color);
   color: var(--text-color-light);
+  font-size: 14px;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   text-align: center;
 
   &:hover {
-    background-color: var(--secondary-color)
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
   }
 }
 
