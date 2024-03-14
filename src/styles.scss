@@ -71,11 +71,23 @@ a {
     background-color: rgb(0, 0, 0, 0.8);
     width: max-content;
     color: white;
-    margin-right: 5px;
+    margin-right: 10px;
     padding: 5px 7px;
     border-radius: 5px;
     position: absolute;
     z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-top: -8px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent black;
+      border-color: transparent transparent transparent black;
+    }
   }
 
   &:hover .tooltiptext {

@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   openSubscription!: Subscription;
 
   menuItems: MenuItem[] = [
-    { label: "صفحه اصلی", path: "", children: [], icon: "bi bi-house", active: true, },
+    { label: "صفحه اصلی", path: "home", children: [], icon: "bi bi-house", active: true, },
     { label: "تیکت‌ها", path: "products", children: [], icon: "bi bi-ticket-detailed", active: false },
     { label: "تسک‌ها", path: "analysis", children: [], icon: "bi bi-list-task", active: false },
     { label: "مشتریان", path: "consumers", children: [], icon: "bi bi-person-lines-fill", active: false },

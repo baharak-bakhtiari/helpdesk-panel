@@ -6,8 +6,10 @@
     "\\src\\app",
     "\\src\\app\\components",
     "\\src\\app\\components\\admin",
-    "\\src\\app\\components\\admin\\sidebar"
+    "\\src\\app\\components\\admin\\dashboard-pages",
+    "\\src\\app\\components\\admin\\dashboard-pages\\home",
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\app\\components\\admin\\sidebar\\sidebar.component.ts",
+  "SelectedNode": "\\src\\app\\app.routes.ts",
   "PreviewInSolutionExplorer": false
 }

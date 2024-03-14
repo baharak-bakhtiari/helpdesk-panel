@@ -5,12 +5,16 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { ResetPasswordComponent } from './components/authentication/reset-password/reset-password.component';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
 import { ProductsComponent } from './components/admin/dashboard-pages/products/products.component';
+import { HomeComponent } from './components/admin/dashboard-pages/home/home.component';
+import { OrdersComponent } from './components/admin/dashboard-pages/orders/orders.component';
 
 export const routes: Routes = [
   {
-    path: '', loadComponent: () => DashboardLayoutComponent, children: [{
-      path: 'products', loadComponent: () => ProductsComponent
-    }]
+    path: '', loadComponent: () => DashboardLayoutComponent, children: [
+      { path: 'home', loadComponent: () => HomeComponent },
+      { path: 'products', loadComponent: () => ProductsComponent },
+      { path: 'products', loadComponent: () => OrdersComponent },
+    ]
   },
   { path: 'login', loadComponent: () => LoginComponent, data: { allowAnonymous: true } },
   { path: 'forgot-password', loadComponent: () => ForgetPasswordComponent, data: { allowAnonymous: true }, },
