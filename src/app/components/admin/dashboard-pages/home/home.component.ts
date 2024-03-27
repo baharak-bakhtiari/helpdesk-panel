@@ -18,13 +18,13 @@ export class HomeComponent {
 
   // Column Definitions: Defines the columns to be displayed.
   colDefs: ColDef[] = [
-    { field: "شناسه تیکت" },
-    { field: "موضوع" },
-    { field: "درخواست‌کننده" },
-    { field: "تاریخ ایجاد" },
-    { field: "اولویت" },
-    { field: "وضعیت" },
-    { field: "بازخورد" },
     { field: "عملیات" },
+    { field: "بازخورد" },
+    { field: "وضعیت" },
+    { field: "اولویت" },
+    { field: "تاریخ ایجاد" },
+    { field: "درخواست‌کننده" },
+    { field: "موضوع" },
+    { field: "شناسه تیکت" },
   ];
 }
