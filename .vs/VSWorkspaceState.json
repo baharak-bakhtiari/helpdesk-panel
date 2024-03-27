@@ -8,8 +8,8 @@
     "\\src\\app\\components\\admin",
     "\\src\\app\\components\\admin\\dashboard-pages",
     "\\src\\app\\components\\admin\\dashboard-pages\\home",
-    "\\src\\styles"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\components\\admin\\dashboard-pages\\home",
+  "SelectedNode": "\\package-lock.json",
   "PreviewInSolutionExplorer": false
 }

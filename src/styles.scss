@@ -3,6 +3,9 @@
 @import "styles/variables.scss";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+:root {
+  --ag-wrapper-border-radius: 8px
+}
 
 * {
   margin: 0;

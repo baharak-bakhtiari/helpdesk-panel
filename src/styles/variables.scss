@@ -18,11 +18,9 @@
 }
 
 :root {
-
   /* ***animation*** */
-
+  --ag-wrapper-border-radius: 8px;
   --animation-ease: all 0.3s ease;
-
 }
 
 /* ***Colors*** */
@@ -33,10 +31,6 @@
   --secondary-background: #4D4C7D;
   --main-background: #ededee; /*white for light themes*/
   --text-color-dark: #2C3333; /*dark gray for light themes*/
-  --text-color-light: #e2e2e2; /*dark gray for light themes  #CBE4DE */
+  --text-color-light: #e2e2e2; /*light gray for dark themes  #CBE4DE */
   --light-gray: #e2e2e2; /*light gray*/
 }
-
-
-
-

@@ -1,4 +1,4 @@
-<section class="p-4">
+<section class="d-flex flex-column gap-4 p-4">
   <div class="d-flex justify-content-between gap-3">
     <div class="d-flex flex-column gap-2 w-50">
       <p class="mb-0">
@@ -66,8 +66,8 @@
       </div>
     </div>
   </div>
-  <div class="d-flex flex-column justify-content-between">
-    <ul class="nav nav-pills mb-3" id="pills-tab">
+  <div class="d-flex flex-column justify-content-between border rounded-3 bg-light">
+    <ul class="nav border-bottom px-2" id="pills-tab">
       <li class="nav-item">
         <button class="nav-link active" id="created" data-bs-toggle="pill" data-bs-target="#pills-created">ایجاد شده</button>
       </li>
@@ -85,7 +85,13 @@
       </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-created">ایجاد شده</div>
+      <div class="tab-pane fade show active" id="pills-created">
+        <ag-grid-angular [rowData]="rowData"
+                         [columnDefs]="colDefs"
+                         class="ag-theme-quartz"
+                         style="height:500px;">
+        </ag-grid-angular>
+      </div>
       <div class="tab-pane fade" id="pills-response-due">موعد انجام امروز</div>
       <div class="tab-pane fade" id="pills-pending">در حال انجام</div>
       <div class="tab-pane fade" id="pills-finished">انجام شده</div>
