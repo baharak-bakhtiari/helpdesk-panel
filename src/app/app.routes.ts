@@ -4,15 +4,15 @@ import { ForgetPasswordComponent } from './components/authentication/forget-pass
 import { LoginComponent } from './components/authentication/login/login.component';
 import { ResetPasswordComponent } from './components/authentication/reset-password/reset-password.component';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
-import { ProductsComponent } from './components/admin/dashboard-pages/products/products.component';
 import { HomeComponent } from './components/admin/dashboard-pages/home/home.component';
 import { OrdersComponent } from './components/admin/dashboard-pages/orders/orders.component';
+import { TicketsComponent } from './components/admin/dashboard-pages/tickets/tickets.component';
 
 export const routes: Routes = [
   {
     path: '', loadComponent: () => DashboardLayoutComponent, children: [
       { path: 'home', loadComponent: () => HomeComponent },
-      { path: 'products', loadComponent: () => ProductsComponent },
+      { path: 'tickets', loadComponent: () => TicketsComponent },
       { path: 'products', loadComponent: () => OrdersComponent },
     ]
   },

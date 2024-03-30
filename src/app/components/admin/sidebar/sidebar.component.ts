@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   menuItems: MenuItem[] = [
     { label: "صفحه اصلی", path: "home", children: [], icon: "bi bi-house", active: true, },
-    { label: "تیکت‌ها", path: "products", children: [], icon: "bi bi-ticket-detailed", active: false },
+    { label: "تیکت‌ها", path: "tickets", children: [], icon: "bi bi-ticket-detailed", active: false },
     { label: "تسک‌ها", path: "analysis", children: [], icon: "bi bi-list-task", active: false },
     { label: "مشتریان", path: "consumers", children: [], icon: "bi bi-person-lines-fill", active: false },
     { label: "تیم پشتیبانی", path: "orders", children: [], icon: "bi bi-people-fill", active: false },

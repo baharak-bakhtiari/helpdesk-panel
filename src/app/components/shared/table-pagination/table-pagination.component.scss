@@ -1,0 +1,35 @@
+.table-pagination > ul > li > a{
+  color: var(--primary-color);
+
+  :hover {
+    color: var(--secondary-color);
+  }
+}
+
+.table-pagination > ul > li:nth-child(2n+1) > a {
+  border: none;
+  background: none;
+  i {
+      font-size:14px;
+  }
+}
+
+.table-pagination > ul > li:nth-child(2n) > a {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  border-radius: 8px;
+  padding:5px 10px;
+}
+
+.table-pagination > ul > li:hover > a,
+.table-pagination > ul > li > a:focus {
+  color: var(--secondary-color);
+  box-shadow: none;
+}
+
+.table-pagination > ul > li.active > a {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--main-background);
+  box-shadow: none;
+}

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
+import { TablePaginationComponent } from '../../../shared/table-pagination/table-pagination.component';
 
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [AgGridAngular],
+  imports: [AgGridAngular, TablePaginationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
